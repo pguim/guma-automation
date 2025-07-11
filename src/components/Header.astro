@@ -1,14 +1,47 @@
 ---
 interface Props {
-  texts:{
+  texts: {
     languageSelector: {
-        ca: string
-        es: string
-        en: string
+      ca: string;
+      es: string;
+      en: string;
+    };
+  };
+  currentLanguage: string;
+}
+const { texts, currentLanguage } = Astro.props;
+import LanguageSelector from "./LanguageSelector.astro";
+---
+
+<header>
+  <LanguageSelector
+    texts={texts.languageSelector}
+    currentLanguage={currentLanguage}
+  />
+</header>
+
+<style>
+  header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    width: 80%;
+    height: 80px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
-}
-const { texts, currentLanguage } = Astro.props
-import LanguageSelector from './LanguageSelector.astro'
----
-<LanguageSelector texts={texts.languageSelector} currentLanguage={currentLanguage}/>
+</style>

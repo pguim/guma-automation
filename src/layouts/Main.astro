@@ -1,6 +1,18 @@
 ---
-const { texts, currentLanguage } = Astro.props
-import Header from '/src/components/Header.astro'
+const { texts, currentLanguage } = Astro.props;
+import Header from "../components/Header.astro";
+import BackgroundVideo from "../components/BackgroundVideo.astro";
 ---
 
-<Header texts={texts.header} currentLanguage={currentLanguage}/>
+<main>
+  <BackgroundVideo />
+  <Header texts={texts.header} currentLanguage={currentLanguage} />
+</main>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>

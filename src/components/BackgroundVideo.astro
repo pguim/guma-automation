@@ -1,0 +1,33 @@
+<video autoplay muted loop>
+  <source src="/video/background.mp4" type="video/mp4" />
+</video>
+<div class="videoMask">&nbsp;</div>
+
+<script>
+  const video = document.querySelector("video");
+  video?.addEventListener("canplay", () => {
+    video.playbackRate = 0.75;
+    video.play();
+  });
+</script>
+
+<style>
+  video {
+    width: 100%;
+    position: fixed;
+    object-fit: fill;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+  }
+  .videoMask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+  }
+</style>
