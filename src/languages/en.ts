@@ -12,5 +12,10 @@ export const texts = {
       services: 'Services',
       contact: 'Contact'
     }
+  },
+  home: {
+    title: 'Industrial automation',
+    sub1: 'Smart solutions',
+    sub2: 'for automation and development'
   }
 }

@@ -10,8 +10,19 @@ body {
   background-color: #30343C;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+}
+
+section {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
