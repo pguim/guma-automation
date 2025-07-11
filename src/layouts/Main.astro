@@ -1,6 +1,6 @@
 ---
-const { texts } = Astro.props
+const { texts, currentLanguage } = Astro.props
 import Header from '/src/components/Header.astro'
 ---
 
-<Header texts={texts.header}/>
+<Header texts={texts.header} currentLanguage={currentLanguage}/>

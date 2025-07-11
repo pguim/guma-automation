@@ -8,7 +8,7 @@ interface Props {
     }
   }
 }
-const { texts } = Astro.props
+const { texts, currentLanguage } = Astro.props
 import LanguageSelector from './LanguageSelector.astro'
 ---
-<LanguageSelector texts={texts.languageSelector}/>
+<LanguageSelector texts={texts.languageSelector} currentLanguage={currentLanguage}/>

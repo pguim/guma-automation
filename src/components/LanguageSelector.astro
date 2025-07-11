@@ -8,8 +8,13 @@ interface Props {
 }
 import { changeLanguage } from "../../utils/language";
 import '/src/styles/global.css'
-const { texts } = Astro.props
+const { texts,  currentLanguage } = Astro.props
 ---
+<script>
+  document.querySelector('#currentLanguage').addEventListener('click', () => {
+    document.querySelector('.dropdown').classList.toggle('active')
+  })
+</script>
 
 <style>
   li {
@@ -23,10 +28,23 @@ const { texts } = Astro.props
   p {
     display: inline;
   }
+  div.dropdown {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+  }
+  div.active {
+    max-height: 60px;
+  }
 </style>
 
-<ul>
-  <li><a href="/ca"><img src="/images/flags/ca.svg"/><p>{texts.ca}</p></a></li>
-  <li><a href="/es"><img src="/images/flags/es.svg"/><p>{texts.es}</p></a></li>
-  <li><a href="/en"><img src="/images/flags/en.svg"/><p>{texts.en}</p></a></li>
-</ul>
+{currentLanguage === "ca" && <span id="currentLanguage"><img src="/images/flags/ca.svg"/><p>{texts.ca}</p></span>}
+{currentLanguage === "es" && <span id="currentLanguage"><img src="/images/flags/es.svg"/><p>{texts.es}</p></span>}
+{currentLanguage === "en" && <span id="currentLanguage"><img src="/images/flags/en.svg"/><p>{texts.en}</p></span>}
+<div class="dropdown">
+  <ul>
+    {currentLanguage !== "ca" && <li><a href="/ca"><img src="/images/flags/ca.svg"/><p>{texts.ca}</p></a></li>}
+    {currentLanguage !== "es" && <li><a href="/es"><img src="/images/flags/es.svg"/><p>{texts.es}</p></a></li>}
+    {currentLanguage !== "en" && <li><a href="/en"><img src="/images/flags/en.svg"/><p>{texts.en}</p></a></li>}
+  </ul>
+</div>
