@@ -41,16 +41,17 @@ import LanguageSelector from "./LanguageSelector.astro";
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 40px;
-    left: 10%;
-    right: 10%;
     height: 80px;
     box-shadow: 0px 5px 8px 0px rgba(80, 80, 80, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.21);
     background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 10px;
     backdrop-filter: blur(5px);
-    animation: 0.7s ease-out 0s 1 fadeIn;
+    animation-name: headerFix;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-direction: alternate;
+    animation-timeline: scroll(block nearest);
+    animation-range: 0 120px;
+    animation-fill-mode: forwards;
   }
 
   img {
@@ -81,12 +82,21 @@ import LanguageSelector from "./LanguageSelector.astro";
     color: #ff7f00;
     transform: scale(1.1);
   }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
+
+  @keyframes headerFix {
+    from {
+      left: 10%;
+      right: 10%;
+      top: 40px;
+      border-radius: 10px;
+      border-width: 1px;
     }
-    100% {
-      opacity: 1;
+    to {
+      left: 0;
+      right: 0;
+      top: 0px;
+      border-radius: 0px;
+      border-width: 0px;
     }
   }
 </style>
