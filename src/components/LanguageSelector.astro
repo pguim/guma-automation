@@ -1,0 +1,32 @@
+---
+interface Props {
+  texts:{
+    ca: string
+    es: string
+    en: string
+  }
+}
+import { changeLanguage } from "../../utils/language";
+import '/src/styles/global.css'
+const { texts } = Astro.props
+---
+
+<style>
+  li {
+    display: block
+  }
+  img {
+    display: inline;
+    width: 60px;
+    height: 20px;
+  }
+  p {
+    display: inline;
+  }
+</style>
+
+<ul>
+  <li><a href="/ca"><img src="/images/flags/ca.svg"/><p>{texts.ca}</p></a></li>
+  <li><a href="/es"><img src="/images/flags/es.svg"/><p>{texts.es}</p></a></li>
+  <li><a href="/en"><img src="/images/flags/en.svg"/><p>{texts.en}</p></a></li>
+</ul>

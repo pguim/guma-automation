@@ -1,0 +1,14 @@
+---
+interface Props {
+  texts:{
+    languageSelector: {
+        ca: string
+        es: string
+        en: string
+    }
+  }
+}
+const { texts } = Astro.props
+import LanguageSelector from './LanguageSelector.astro'
+---
+<LanguageSelector texts={texts.languageSelector}/>
