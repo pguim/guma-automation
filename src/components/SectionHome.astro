@@ -10,8 +10,7 @@ interface Props {
 const { id, texts } = Astro.props;
 ---
 
-<section>
-  <span id={id}></span>
+<section id={id}>
   <h1>{texts.title}</h1>
   <h2>{texts.sub1}</h2>
   <h2>{texts.sub2}</h2>
