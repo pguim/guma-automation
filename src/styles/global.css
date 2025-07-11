@@ -1,3 +1,17 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #30343C;
+  width: 100vw;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }
