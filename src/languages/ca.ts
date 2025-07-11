@@ -4,6 +4,13 @@ export const texts = {
       ca: 'Català',
       es: 'Castellà',
       en: 'Anglès'
+    },
+    menuItems: {
+      home: 'Inici',
+      about: 'Sobre mi',
+      portfolio: 'Portfoli',
+      services: 'Serveis',
+      contact: 'Contacte'
     }
   }
 }
