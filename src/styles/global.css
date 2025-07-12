@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Michroma";
+  src:
+    url("/fonts/Michroma-Regular.ttf") format("truetype");
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
@@ -9,6 +15,12 @@
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+}
+
+h1 {
+  font-family: 'Michroma', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin-block: 10px;
 }
 
 body {
