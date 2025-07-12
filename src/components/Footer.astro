@@ -1,16 +1,12 @@
 ---
-
+import GithubIcon from "./icons/GithubIcon.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
 ---
 
 <footer>
   <section>
-    <a
-      href="https://www.linkedin.com/in/pau-guimer%C3%A0-mart%C3%ADnez-61116814/"
-      target="_blank"><img src="/images/icons/linkedin.svg" /></a
-    >
-    <a href="https://github.com/pguim" target="_blank"
-      ><img src="/images/icons/github.svg" /></a
-    >
+    <GithubIcon />
+    <LinkedinIcon />
   </section>
   <p>GUMA Automation ® - 2025</p>
 </footer>
@@ -25,16 +21,12 @@
     display: flex;
     align-items: center;
   }
-  img {
-    width: 1.1rem;
-  }
   section {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
     align-items: center;
-    gap: 10px;
-    width: 50%;
+    gap: 15px;
     scroll-snap-align: none;
   }
 </style>
