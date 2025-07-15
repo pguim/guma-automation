@@ -5,6 +5,8 @@ interface Props {
     title: string;
     sub1: string;
     sub2: string;
+    main: string;
+    quote: string;
   };
 }
 const { id, texts } = Astro.props;
@@ -14,4 +16,6 @@ const { id, texts } = Astro.props;
   <h1>{texts.title}</h1>
   <h2>{texts.sub1}</h2>
   <h2>{texts.sub2}</h2>
+  <p>{texts.main}</p>
+  <p class="quote">{texts.quote}</p>
 </section>

@@ -4,8 +4,14 @@
     url("/fonts/Michroma-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   color: white;
   margin: 0px;
   padding: 0px;
@@ -17,10 +23,28 @@ html {
   scroll-snap-type: y mandatory;
 }
 
-h1 {
+h1,
+h2 {
   font-family: 'Michroma', Arial, Helvetica, sans-serif;
   font-weight: 300;
-  margin-block: 10px;
+  line-height: 2.0rem;
+  text-align: left;
+  margin-block: .6rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  opacity: .8;
+}
+
+section p {
+  text-align: left;
+  margin-top: 1.4rem;
+  line-height: 2.3rem;
 }
 
 body {
@@ -54,13 +78,18 @@ header {
 
 section {
   height: 100%;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   scroll-snap-align: center;
+}
+
+.quote {
+  font-size: .9rem;
+  opacity: .7;
 }
 
 footer {
@@ -77,19 +106,25 @@ footer {
 }
 
 @keyframes headerFix {
-  from {
+  0% {
     left: 10%;
     right: 10%;
     top: 40px;
     border-radius: 10px;
     border-width: 1px;
+    height: 80px;
   }
 
-  to {
+  75% {
+    border-width: 0px;
+  }
+
+  100% {
     left: 0;
     right: 0;
     top: 0px;
     border-radius: 0px;
     border-width: 0px;
+    height: 60px;
   }
 }
