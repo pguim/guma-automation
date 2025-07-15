@@ -3,6 +3,7 @@ const { texts, currentLanguage } = Astro.props;
 import Header from "../components/Header.astro";
 import BackgroundVideo from "../components/BackgroundVideo.astro";
 import SectionHome from "../components/SectionHome.astro";
+import SectionAbout from "../components/SectionAbout.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -10,7 +11,7 @@ import Footer from "../components/Footer.astro";
   <BackgroundVideo />
   <Header texts={texts.header} currentLanguage={currentLanguage} />
   <SectionHome id="home" texts={texts.home} />
-  <SectionHome id="about" texts={texts.home} />
+  <SectionAbout id="about" texts={texts.about} />
   <SectionHome id="portfolio" texts={texts.home} />
   <SectionHome id="services" texts={texts.home} />
   <SectionHome id="contact" texts={texts.home} />

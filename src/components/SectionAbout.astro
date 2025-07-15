@@ -1,0 +1,33 @@
+---
+interface Props {
+  id: string;
+  texts: {
+    title: string;
+    sub: string;
+    main1: string;
+    main2: string;
+    listTitle: string;
+    li1: string;
+    li2: string;
+    li3: string;
+    li4: string;
+    li5: string;
+  };
+}
+const { id, texts } = Astro.props;
+---
+
+<section id={id}>
+  <h1>{texts.title}</h1>
+  <h2>{texts.sub}</h2>
+  <p>{texts.main1}</p>
+  <p>{texts.main2}</p>
+  <p>{texts.listTitle}</p>
+  <ul>
+    <li><p>{texts.li1}</p></li>
+    <li><p>{texts.li2}</p></li>
+    <li><p>{texts.li3}</p></li>
+    <li><p>{texts.li4}</p></li>
+    <li><p>{texts.li5}</p></li>
+  </ul>
+</section>
