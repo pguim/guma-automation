@@ -23,11 +23,13 @@ import LanguageSelector from "./LanguageSelector.astro";
 <header>
   <img src="/images/main-logo.svg" />
   <ul>
-    <li><a href="#home">{texts.menuItems.home}</a></li>
-    <li><a href="#about">{texts.menuItems.about}</a></li>
-    <li><a href="#portfolio">{texts.menuItems.portfolio}</a></li>
-    <li><a href="#services">{texts.menuItems.services}</a></li>
-    <li><a href="#contact">{texts.menuItems.contact}</a></li>
+    <li><a class="home" href="#home">{texts.menuItems.home}</a></li>
+    <li><a class="about" href="#about">{texts.menuItems.about}</a></li>
+    <li>
+      <a class="portfolio" href="#portfolio">{texts.menuItems.portfolio}</a>
+    </li>
+    <li><a class="services" href="#services">{texts.menuItems.services}</a></li>
+    <li><a class="contact" href="#contact">{texts.menuItems.contact}</a></li>
   </ul>
   <LanguageSelector
     texts={texts.languageSelector}
@@ -59,9 +61,93 @@ import LanguageSelector from "./LanguageSelector.astro";
   }
   a {
     margin: 0 auto;
+    animation-duration: 1ms;
+    animation-direction: alternate;
+    animation-timeline: scroll(block nearest);
+    animation-range: 0% 100%;
+    animation-fill-mode: none;
   }
   a:hover {
     color: #ff7f00;
     transform: scale(1.1);
+  }
+
+  .home {
+    animation-name: sectionHome;
+  }
+  .about {
+    animation-name: sectionAbout;
+  }
+  .portfolio {
+    animation-name: sectionPortfolio;
+  }
+  .services {
+    animation-name: sectionServices;
+  }
+  .contact {
+    animation-name: sectionContact;
+  }
+
+  @keyframes sectionHome {
+    0%,
+    19% {
+      color: #ff7f00;
+    }
+    20%,
+    100% {
+      color: white;
+    }
+  }
+  @keyframes sectionAbout {
+    0%,
+    19% {
+      color: white;
+    }
+    20%,
+    39% {
+      color: #ff7f00;
+    }
+    40%,
+    100% {
+      color: white;
+    }
+  }
+  @keyframes sectionPortfolio {
+    0%,
+    39% {
+      color: white;
+    }
+    40%,
+    59% {
+      color: #ff7f00;
+    }
+    60%,
+    100% {
+      color: white;
+    }
+  }
+  @keyframes sectionServices {
+    0%,
+    59% {
+      color: white;
+    }
+    60%,
+    79% {
+      color: #ff7f00;
+    }
+    80%,
+    100% {
+      color: white;
+    }
+  }
+  @keyframes sectionContact {
+    0%,
+    79% {
+      color: white;
+    }
+    80%,
+    100% {
+      color: #ff7f00;
+    }
   }
 </style>
