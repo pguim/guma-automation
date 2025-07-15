@@ -23,7 +23,7 @@ const { id, texts } = Astro.props;
   <p>{texts.main1}</p>
   <p>{texts.main2}</p>
   <p>{texts.listTitle}</p>
-  <ul>
+  <ul class="list">
     <li class="chemie"><p>{texts.li1}</p></li>
     <li class="logistics"><p>{texts.li2}</p></li>
     <li class="packaging"><p>{texts.li3}</p></li>
@@ -33,44 +33,7 @@ const { id, texts } = Astro.props;
 </section>
 
 <style>
-  ul {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-  li {
-    display: flex;
-    width: 250px;
-    height: 200px;
-    overflow: hidden;
-    padding: 10px;
-    align-items: center;
-    border-radius: 5px;
-    border: 2px solid #ff7f00;
-    background-size: cover;
-    background-position-x: center;
-    background-color: rgba(120, 120, 120, 0.3);
-    background-blend-mode: lighten;
-  }
-  li p {
-    width: 100%;
-    margin: 0 auto;
-    font-family: "Poiret", Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    text-align: center;
-    font-size: 1.2em;
-    color: rgb(255, 232, 198);
-    text-shadow:
-      1px 0 #ff7f00,
-      -1px 0 #ff7f00,
-      0 1px #ff7f00,
-      0 -1px #ff7f00,
-      1px 1px #ff7f00,
-      -1px -1px #ff7f00,
-      1px -1px #ff7f00,
-      -1px 1px #ff7f00;
-  }
+  
   .chemie {
     background-image: url("/images/chemie.webp");
   }

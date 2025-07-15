@@ -1,0 +1,29 @@
+  @media only screen and (max-width: 800px) {
+    html {
+      font-size: 12px;
+    }
+
+    header {
+      animation-name: none;
+      border: 0px;
+      width: 100%;
+    }
+
+    main section {
+      width: 100%;
+      padding-inline: 1rem;
+    }
+
+    .list {
+      display: block;
+    }
+
+    .list li {
+      height: 1rem;
+    }
+
+    footer section {
+      justify-content: start;
+      padding-left: 15px;
+    }
+  }

@@ -1,5 +1,14 @@
+---
+const { size } = Astro.props;
+---
+
 <a href="https://github.com/pguim" target="_blank" class="icon-link">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon">
+  <svg
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon"
+    style={`width: ${size}; height: ${size};`}
+  >
     <path
       d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.263.793-.583
         0-.288-.01-1.05-.015-2.06-3.338.726-4.042-1.612-4.042-1.612-.546-1.387-1.333-1.757-1.333-1.757
