@@ -10,6 +10,12 @@
     url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Poiret";
+  src:
+    url("/fonts/PoiretOne-Regular.ttf") format("truetype");
+}
+
 * {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   color: white;
@@ -30,15 +36,17 @@ h2 {
   line-height: 2.0rem;
   text-align: left;
   margin-block: .6rem;
+  color: #ff7f00;
 }
 
 h1 {
   font-size: 1.6rem;
+
 }
 
 h2 {
   font-size: 1.2rem;
-  opacity: .8;
+  opacity: .7;
 }
 
 section p {
@@ -103,6 +111,11 @@ footer {
   box-shadow: 0px 5px 8px 0px rgba(80, 80, 80, 0.5);
   background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(5px);
+}
+
+footer p {
+  font-family: 'Poiret', Arial, Helvetica, sans-serif;
+
 }
 
 @keyframes headerFix {

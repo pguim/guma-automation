@@ -47,7 +47,7 @@ const { id, texts } = Astro.props;
     padding: 10px;
     align-items: center;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 2px solid #ff7f00;
     background-size: cover;
     background-position-x: center;
     background-color: rgba(120, 120, 120, 0.3);
@@ -56,19 +56,20 @@ const { id, texts } = Astro.props;
   li p {
     width: 100%;
     margin: 0 auto;
-    font-weight: 500;
+    font-family: "Poiret", Arial, Helvetica, sans-serif;
+    font-weight: 700;
     text-align: center;
-    font-size: 1.3em;
-    color: rgba(255, 120, 20, 0.9);
+    font-size: 1.2em;
+    color: rgb(255, 232, 198);
     text-shadow:
-      1px 0 #fff,
-      -1px 0 #fff,
-      0 1px #fff,
-      0 -1px #fff,
-      1px 1px #fff,
-      -1px -1px #fff,
-      1px -1px #fff,
-      -1px 1px #fff;
+      1px 0 #ff7f00,
+      -1px 0 #ff7f00,
+      0 1px #ff7f00,
+      0 -1px #ff7f00,
+      1px 1px #ff7f00,
+      -1px -1px #ff7f00,
+      1px -1px #ff7f00,
+      -1px 1px #ff7f00;
   }
   .chemie {
     background-image: url("/images/chemie.webp");
@@ -78,13 +79,11 @@ const { id, texts } = Astro.props;
   }
   .packaging {
     background-image: url("/images/packaging.webp");
-    background-position: 30%;
   }
   .automotive {
     background-image: url("/images/automotive.webp");
   }
   .batch {
     background-image: url("/images/batch.webp");
-    background-position: 30%;
   }
 </style>
