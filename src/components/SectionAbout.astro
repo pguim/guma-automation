@@ -24,10 +24,67 @@ const { id, texts } = Astro.props;
   <p>{texts.main2}</p>
   <p>{texts.listTitle}</p>
   <ul>
-    <li><p>{texts.li1}</p></li>
-    <li><p>{texts.li2}</p></li>
-    <li><p>{texts.li3}</p></li>
-    <li><p>{texts.li4}</p></li>
-    <li><p>{texts.li5}</p></li>
+    <li class="chemie"><p>{texts.li1}</p></li>
+    <li class="logistics"><p>{texts.li2}</p></li>
+    <li class="packaging"><p>{texts.li3}</p></li>
+    <li class="automotive"><p>{texts.li4}</p></li>
+    <li class="batch"><p>{texts.li5}</p></li>
   </ul>
 </section>
+
+<style>
+  ul {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  li {
+    display: flex;
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-size: cover;
+    background-position-x: center;
+    background-color: rgba(120, 120, 120, 0.3);
+    background-blend-mode: lighten;
+  }
+  li p {
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.3em;
+    color: rgba(255, 120, 20, 0.9);
+    text-shadow:
+      1px 0 #fff,
+      -1px 0 #fff,
+      0 1px #fff,
+      0 -1px #fff,
+      1px 1px #fff,
+      -1px -1px #fff,
+      1px -1px #fff,
+      -1px 1px #fff;
+  }
+  .chemie {
+    background-image: url("/images/chemie.webp");
+  }
+  .logistics {
+    background-image: url("/images/logistics.webp");
+  }
+  .packaging {
+    background-image: url("/images/packaging.webp");
+    background-position: 30%;
+  }
+  .automotive {
+    background-image: url("/images/automotive.webp");
+  }
+  .batch {
+    background-image: url("/images/batch.webp");
+    background-position: 30%;
+  }
+</style>
