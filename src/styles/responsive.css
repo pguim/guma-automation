@@ -1,12 +1,60 @@
-  @media only screen and (max-width: 800px) {
+  @media only screen and ((max-width: 1060px) or (max-height: 700px)) {
     html {
       font-size: 14px;
     }
 
     header {
       animation-name: none;
+      box-shadow: none;
       border: 0px;
       width: 100%;
+      height: 60px;
+    }
+
+    .hamburgerContainer {
+      display: inline;
+      position: fixed;
+      right: 10px;
+    }
+
+    .menu {
+      display: inline-block;
+      position: fixed;
+      top: 60px;
+      width: 100%;
+      height: 0px;
+      transition: all .2s ease-in-out;
+      background-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0px 5px 8px 0px rgba(80, 80, 80, 0.5);
+      backdrop-filter: blur(5px);
+      z-index: 10;
+    }
+
+    .menu.open {
+      height: 160px;
+    }
+
+    .sections {
+      display: none;
+    }
+
+    .menu li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 32px;
+    }
+
+    .menu a {
+      display: inline-block;
+      padding-top: 7px;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      box-shadow: 1px 5px 8px 0px rgba(80, 80, 80, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.21);
     }
 
     main section {
@@ -45,13 +93,21 @@
         -1px -1px 1px#30343C;
     }
 
+    .languageContainer {
+      display: none;
+    }
+
+  }
+
+  @media only screen and (max-width: 650px) {
+
     footer section {
       justify-content: start;
       padding-left: 15px;
     }
   }
 
-  @media only screen and (max-height: 800px) {
+  @media only screen and ((max-height: 700px)) {
     html {
       scroll-snap-type: none;
     }
@@ -69,12 +125,12 @@
       scroll-snap-align: center;
     }
 
-    .languageContainer {
-      display: none;
+    main section:first-child {
+      padding-top: 50px;
     }
 
-    .sections {
-      display: none;
+    main section:last-child {
+      padding-bottom: 50px;
     }
 
   }

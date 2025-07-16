@@ -1,4 +1,6 @@
 ---
+import HeaderSections from "./HeaderSections.astro";
+import Hamburguer from "./icons/Hamburguer.astro";
 interface Props {
   texts: {
     languageSelector: {
@@ -20,22 +22,26 @@ const { texts, currentLanguage } = Astro.props;
 import LanguageSelector from "./LanguageSelector.astro";
 ---
 
+<script>
+  document.querySelector(".hamburguer")?.addEventListener("click", () => {
+    document.querySelector(".hamburguer")?.classList.toggle("open");
+    document.querySelector(".menu")?.classList.toggle("open");
+  });
+</script>
 <header>
   <img src="/images/main-logo.svg" />
-  <ul class="sections">
-    <li><a class="home" href="#home">{texts.menuItems.home}</a></li>
-    <li><a class="about" href="#about">{texts.menuItems.about}</a></li>
-    <li>
-      <a class="portfolio" href="#portfolio">{texts.menuItems.portfolio}</a>
-    </li>
-    <li><a class="services" href="#services">{texts.menuItems.services}</a></li>
-    <li><a class="contact" href="#contact">{texts.menuItems.contact}</a></li>
-  </ul>
+  <HeaderSections texts={texts} listClass="sections" />
   <LanguageSelector
     texts={texts.languageSelector}
     currentLanguage={currentLanguage}
   />
+  <div class="hamburgerContainer">
+    <Hamburguer size="32" />
+  </div>
 </header>
+<div class="menu open">
+  <HeaderSections texts={texts} />
+</div>
 
 <style>
   @keyframes sectionHome {

@@ -1,0 +1,13 @@
+---
+const { texts, listClass } = Astro.props;
+---
+
+<ul class={listClass}>
+  <li><a class="home" href="#home">{texts.menuItems.home}</a></li>
+  <li><a class="about" href="#about">{texts.menuItems.about}</a></li>
+  <li>
+    <a class="portfolio" href="#portfolio">{texts.menuItems.portfolio}</a>
+  </li>
+  <li><a class="services" href="#services">{texts.menuItems.services}</a></li>
+  <li><a class="contact" href="#contact">{texts.menuItems.contact}</a></li>
+</ul>
