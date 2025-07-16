@@ -27,6 +27,12 @@ import LanguageSelector from "./LanguageSelector.astro";
     document.querySelector(".hamburguer")?.classList.toggle("open");
     document.querySelector(".menu")?.classList.toggle("open");
   });
+  document.querySelectorAll(".menu a")?.forEach((item) => {
+    item.addEventListener("click", () => {
+      document.querySelector(".hamburguer")?.classList.toggle("open");
+      document.querySelector(".menu")?.classList.toggle("open");
+    });
+  });
 </script>
 <header>
   <img src="/images/main-logo.svg" />
@@ -39,7 +45,7 @@ import LanguageSelector from "./LanguageSelector.astro";
     <Hamburguer size="32" />
   </div>
 </header>
-<div class="menu open">
+<div class="menu">
   <HeaderSections texts={texts} />
 </div>
 
