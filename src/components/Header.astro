@@ -47,6 +47,17 @@ import LanguageSelector from "./LanguageSelector.astro";
 </header>
 <div class="menu">
   <HeaderSections texts={texts} />
+  <div class="languageSelectionResp">
+    <a href="/ca" class={currentLanguage === "ca" ? "active" : ""}
+      ><img src="/images/flags/ca.svg" height="24" />CAT</a
+    >
+    <a href="/es" class={currentLanguage === "es" ? "active" : ""}
+      ><img src="/images/flags/es.svg" height="24" />ES</a
+    >
+    <a href="/en" class={currentLanguage === "en" ? "active" : ""}
+      ><img src="/images/flags/en.svg" height="24" />EN</a
+    >
+  </div>
 </div>
 
 <style>
