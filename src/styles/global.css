@@ -83,6 +83,13 @@ header {
   animation-fill-mode: forwards;
 }
 
+main {
+  height: 100%;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+}
+
 main section:first-child {
   padding-top: 80px;
 }
@@ -133,6 +140,26 @@ main section {
     -1px -1px 1px#30343C;
 }
 
+.chemie {
+  background-image: url("/images/chemie.webp");
+}
+
+.logistics {
+  background-image: url("/images/logistics.webp");
+}
+
+.packaging {
+  background-image: url("/images/packaging.webp");
+}
+
+.automotive {
+  background-image: url("/images/automotive.webp");
+}
+
+.batch {
+  background-image: url("/images/batch.webp");
+}
+
 .quote {
   font-size: .9rem;
   opacity: .7;
@@ -157,6 +184,39 @@ footer section {
 
 footer p {
   font-family: 'Poiret', Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  position: fixed;
+  right: 10px;
+}
+
+footer section {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  gap: 15px;
+  scroll-snap-align: none;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  object-fit: cover;
+  left: 0;
+  bottom: 0;
+  z-index: -10;
+}
+
+.videoMask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.9;
+  z-index: -1;
 }
 
 @keyframes headerFix {
