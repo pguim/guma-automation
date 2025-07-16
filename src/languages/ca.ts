@@ -30,6 +30,6 @@ export const texts = {
     li2: "Magatzems automàtics i logística",
     li3: "Línies d'envasat i packaging",
     li4: "Automòbil",
-    li5: "Sistemes Batch i control de processos continus",
+    li5: "Sistemes Batch i processos continus",
   }
 }

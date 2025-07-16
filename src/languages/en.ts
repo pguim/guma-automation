@@ -30,6 +30,6 @@ export const texts = {
     li2: "Automatic warehouses and logistics",
     li3: "Packaging and packing lines",
     li4: "Automotive",
-    li5: "Batch and continuous process control systems",
+    li5: "Batch and continuous process systems",
   }
 }

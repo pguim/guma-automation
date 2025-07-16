@@ -30,6 +30,6 @@ export const texts = {
     li2: "Almacenes automáticos y logística",
     li3: "Líneas de envasado y empaquetado",
     li4: "Automóvil",
-    li5: "Sistemas Batch y control de procesos continuos",
+    li5: "Sistemas Batch y procesos continuos",
   }
 }
