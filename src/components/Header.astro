@@ -22,7 +22,7 @@ import LanguageSelector from "./LanguageSelector.astro";
 
 <header>
   <img src="/images/main-logo.svg" />
-  <ul>
+  <ul class="sections">
     <li><a class="home" href="#home">{texts.menuItems.home}</a></li>
     <li><a class="about" href="#about">{texts.menuItems.about}</a></li>
     <li>
@@ -38,56 +38,6 @@ import LanguageSelector from "./LanguageSelector.astro";
 </header>
 
 <style>
-  img {
-    height: 75%;
-    margin-left: 10px;
-  }
-  ul {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  li {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-  }
-  a {
-    margin: 0 auto;
-    animation-duration: 1ms;
-    animation-direction: alternate;
-    animation-timeline: scroll(block nearest);
-    animation-range: 0% 100%;
-    animation-fill-mode: none;
-  }
-  a:hover {
-    color: #ff7f00;
-    transform: scale(1.1);
-  }
-
-  .home {
-    animation-name: sectionHome;
-  }
-  .about {
-    animation-name: sectionAbout;
-  }
-  .portfolio {
-    animation-name: sectionPortfolio;
-  }
-  .services {
-    animation-name: sectionServices;
-  }
-  .contact {
-    animation-name: sectionContact;
-  }
-
   @keyframes sectionHome {
     0%,
     19% {

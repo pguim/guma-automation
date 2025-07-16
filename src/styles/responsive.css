@@ -60,8 +60,6 @@
       margin-top: 30px;
     }
 
-
-
     main section {
       height: auto;
       margin: 0 auto;
@@ -70,4 +68,13 @@
       justify-content: center;
       scroll-snap-align: center;
     }
+
+    .languageContainer {
+      display: none;
+    }
+
+    .sections {
+      display: none;
+    }
+
   }
