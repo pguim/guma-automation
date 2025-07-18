@@ -31,5 +31,44 @@ export const texts = {
     li3: "Línies d'envasat i packaging",
     li4: "Automòbil",
     li5: "Sistemes Batch i processos continus",
-  }
+  },
+  portfolio: {
+    title: "Portfoli",
+    main: "Alguns àmbits de projectes que he desenvolupat:",
+    cards: {
+      chemie: {
+        title: "Indústria química",
+        points: {
+          1: "Programació amb PCS7 i Simatic Batch per a components de línies de producció.",
+          2: "Seqüències complexes amb enclavaments i alarmes.",
+          3: "\"Proof Test\" d'elements de classe \"Z\" i modificacions de programa de seguretat (SPLC)."
+        },
+      },
+      logistics: {
+        title: "Automatització logística",
+        points: {
+          1: "Programació offline i posta en marxa de diferents parts de capceleres de magatzems automàtics (sorters, fingers, pickings...).",
+          2: "Coordinació amb capes superiors d'IT (WMS, MFC).",
+          3: "Integració d'elements d'emmagatzematge (transelevadors).",
+          4: "Desenvolupament i posta en marxa d'SCADAs per al control d'instal·lacions amb fins a més de 80 PLCs amb estàndard propi."
+        },
+      },
+      automotive: {
+        title: "Automòbil",
+        points: {
+          1: "Desenvolupament offline i posta en marxa de diferents línies robotitzades per a grans integradors automobilistics amb diferents estàndards del sector.",
+        },
+      },
+      packaging: {
+        title: "Envasat",
+        points: {
+          1: "Posada en marxa de programes del client de línies completes d'envasat.",
+          2: "Integració i/o posada en marxa (incloent modificacions) de diferent maquinària: despaletitzadors, transport, omplidores, mescladores, taponadores, etiquetadores, empaquetadores, paletizadores, enfardadores,...",
+          3: "Programació amb estàndard propi de sistemes de neteja (CIP/WIP).",
+          4: "Desenvolupament i posta en marxa d'SCADAs per al control complet de la línia."
+        },
+      }
+    },
+    quote: "I molt més!"
+  },
 }

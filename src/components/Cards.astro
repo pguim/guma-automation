@@ -1,0 +1,14 @@
+---
+const { title, points } = Astro.props;
+---
+
+<article class="card">
+  <h3>{title}</h3>
+  <ul>
+    {
+      Object.values(points).map((point) => {
+        return <li>{point}</li>;
+      })
+    }
+  </ul>
+</article>

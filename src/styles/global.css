@@ -39,12 +39,23 @@ h2 {
 }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 h2 {
-  font-size: 1.2rem;
-  opacity: .7;
+  font-size: 1.3rem;
+  opacity: .8;
+}
+
+h3 {
+  font-weight: 300;
+  line-height: 1.6rem;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 section p {
@@ -161,7 +172,6 @@ header img {
 
 .languageContainer ul {
   display: flex;
-  list-style-type: none;
 }
 
 .languageContainer ul:last-child {
@@ -225,23 +235,23 @@ main section {
 }
 
 .list {
-  margin-top: 10px;
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
 }
 
 .list li {
   display: flex;
-  width: 250px;
-  height: 200px;
+  width: 200px;
+  height: 180px;
   overflow: hidden;
   padding: 10px;
   align-items: center;
-  border-radius: 5px;
-  border: 1px solid white;
+  border-radius: 3px;
   background-size: cover;
   background-position-x: center;
+  border: 1px solid white;
   background-color: rgba(120, 120, 120, 0.3);
   background-blend-mode: lighten;
 }
@@ -251,7 +261,7 @@ main section {
   margin: 0 auto;
   font-weight: 500;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.3rem;
   color: rgb(255, 255, 255);
   text-shadow:
     1px 1px 1px#30343C,
@@ -260,6 +270,7 @@ main section {
     -1px -1px 1px#30343C;
 }
 
+/*
 .chemie {
   background-image: url("/images/chemie.webp");
 }
@@ -278,6 +289,36 @@ main section {
 
 .batch {
   background-image: url("/images/batch.webp");
+}
+*/
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-block: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid white;
+  background-color: rgba(120, 120, 120, 0.3);
+  background-blend-mode: lighten;
+  opacity: .8;
+  transition: all .3s ease-in-out;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.card li {
+  font-size: .7rem;
+  line-height: 1.3rem;
+}
+
+.card:hover {
+  opacity: 1;
+  max-height: 160px;
+
+  & li {
+    font-size: .8rem;
+  }
 }
 
 .quote {

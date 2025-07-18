@@ -31,5 +31,44 @@ export const texts = {
     li3: "Líneas de envasado y empaquetado",
     li4: "Automóvil",
     li5: "Sistemas Batch y procesos continuos",
-  }
+  },
+  portfolio: {
+    title: "Portfolio",
+    main: "Algunos ámbitos de proyectos que he desarrollado:",
+    cards: {
+      chemie: {
+        title: "Industria química",
+        points: {
+          1: "Programación con PCS7 y Simatic Batch para componentes de líneas de producción.",
+          2: "Secuencias complejas con enclavamientos y alarmas.",
+          3: "\"Proof Test\" de elementos de clase \"Z\" y modificaciones de programa de seguridad (SPLC)."
+        },
+      },
+      logistics: {
+        title: "Automatitzación logística",
+        points: {
+          1: "Programación offline y puesta en marcha de diferentes partes de cabeceras de almacenes automáticos (sorters, fingers, pickings...).",
+          2: "Coordinación con capas superiores de IT (WMS, MFC).",
+          3: "Integración de elementos de almacenaje (transelevadores).",
+          4: "Desarrollo y puesta en marcha de SCADAs para el control de instalaciones con hasta más de 80 PLCs con estándar propio."
+        },
+      },
+      automotive: {
+        title: "Automóvil",
+        points: {
+          1: "Desarrollo offline y puesta en marcha de diferentes líneas robotizadas para grandes integradores automovilísticos con diferentes estándares del sector.",
+        },
+      },
+      packaging: {
+        title: "Envasado",
+        points: {
+          1: "Puesta en marcha de programas del cliente de líneas completas de envasado.",
+          2: "Integración y/o puesta en marcha (incluyendo modificaciones) de diferente maquinaria: despaletizadores, transporte, llenadoras, mezcladoras, taponadoras, etiquetadoras, empaquetadoras, paletizadoras, enfardadoras,...",
+          3: "Programación con estándar propio de sistemas de limpieza (CIP/WIP).",
+          4: "Desarrollo y puesta en marcha de SCADAs para el control completo de la línea."
+        },
+      }
+    },
+    quote: "¡Y mucho más!"
+  },
 }

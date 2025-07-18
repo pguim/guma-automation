@@ -1,0 +1,43 @@
+---
+import Cards from "./Cards.astro";
+
+type card = {
+  title: string;
+  points: object;
+};
+
+interface Props {
+  id: string;
+  texts: {
+    title: string;
+    main: string;
+    cards: {
+      chemie: card;
+      logistics: card;
+      automotive: card;
+      packaging: card;
+    };
+    quote: string;
+  };
+}
+const { id, texts } = Astro.props;
+---
+
+<section id={id}>
+  <h1>{texts.title}</h1>
+  <h2>{texts.main}</h2>
+  <Cards
+    title={texts.cards.packaging.title}
+    points={texts.cards.packaging.points}
+  />
+  <Cards
+    title={texts.cards.logistics.title}
+    points={texts.cards.logistics.points}
+  />
+  <Cards
+    title={texts.cards.automotive.title}
+    points={texts.cards.automotive.points}
+  />
+  <Cards title={texts.cards.chemie.title} points={texts.cards.chemie.points} />
+  <p class="quote">{texts.quote}</p>
+</section>
